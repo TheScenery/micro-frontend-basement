@@ -4,29 +4,36 @@
 
 <script>
 import { loadMicroApp } from 'qiankun';
-
-let app = null;
-
 export default {
     name: 'MicroLayout',
 
+    data() {
+        return { app: null, }
+    },
+
     methods: {
         loadMicroApp() {
-            if (app) {
-                app.unmount();
+            if (this.app) {
+                this.app.unmount();
             }
             const appConfig = { ...this.$route.meta, container: this.$refs.container }
             console.log(appConfig)
-            app = loadMicroApp(appConfig, { sandbox: { strictStyleIsolation: true } })
-            console.log(app)
+            this.app = loadMicroApp(appConfig, { sandbox: { experimentalStyleIsolation: true } })
         }
     },
 
     mounted() {
         this.loadMicroApp();
-        this.$watch('$route.meta.name', () => {
-            this.loadMicroApp();
-        })
+    },
+
+    updated() {
+        this.loadMicroApp();
+    },
+
+    beforeUnmount() {
+        if (this.app) {
+            this.app.unmount();
+        }
     }
 }
 </script>
