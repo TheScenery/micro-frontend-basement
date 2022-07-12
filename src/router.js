@@ -10,6 +10,7 @@ const routes = [
     {
         path: '/',
         component: BaseLayout,
+        redirect: '/main',
         children: [
             { path: 'main', component: HelloWorld },
             { path: 'vue', component: MicroLayout, meta: { name: 'vue', entry: '//localhost:8082' } },
