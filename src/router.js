@@ -13,7 +13,7 @@ const routes = [
         children: [
             { path: 'main', component: HelloWorld },
             { path: 'vue', component: MicroLayout, meta: { name: 'vue', entry: '//localhost:8082' } },
-            { path: 'react', component: MicroLayout, meta: { name: 'react', entry: '//localhost:8083' } },
+            { path: 'react', component: MicroLayout, meta: { name: 'react', entry: '//localhost:3000' } },
         ]
     },
 ]
