@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="base-container">
   <router-view></router-view>
 </div>
 </template>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style>
-#app {
+.base-container {
   position: absolute;
   top: 0;
   bottom: 0;
