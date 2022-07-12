@@ -13,9 +13,6 @@ export default {
 
     methods: {
         loadMicroApp() {
-            if (this.app) {
-                this.app.unmount();
-            }
             const appConfig = { ...this.$route.meta, container: this.$refs.container }
             console.log(appConfig)
             this.app = loadMicroApp(appConfig, { sandbox: { experimentalStyleIsolation: true } })
