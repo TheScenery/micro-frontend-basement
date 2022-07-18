@@ -20,6 +20,11 @@
                                 React 微应用
                             </router-link>
                         </el-menu-item>
+                        <el-menu-item class="menu-item">
+                            <router-link to="/router">
+                                Router 微应用
+                            </router-link>
+                        </el-menu-item>
                     </el-menu>
                 </el-aside>
                 <el-main class="main">

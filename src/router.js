@@ -15,6 +15,7 @@ const routes = [
             { path: 'main', component: HelloWorld },
             { path: 'vue', component: MicroLayout, meta: { name: 'vue', entry: '//localhost:8082' } },
             { path: 'react', component: MicroLayout, meta: { name: 'react', entry: '//localhost:3000' } },
+            { path: 'router', component: MicroLayout, meta: { name: 'router', entry: '//localhost:8083' } },
         ]
     },
 ]
